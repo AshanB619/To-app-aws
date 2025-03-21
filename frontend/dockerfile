@@ -1,0 +1,21 @@
+# Use Node.js base image
+FROM node:18
+
+# Set working directory
+WORKDIR /app
+
+# Copy dependencies
+COPY package*.json ./
+RUN npm install
+
+# Copy all files
+COPY . .
+
+# Expose the correct port
+EXPOSE 3001
+
+# Set the environment variable inside the container
+ENV PORT=3001
+
+# Start the React app
+CMD ["npm", "start"]
