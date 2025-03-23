@@ -7,7 +7,7 @@ resource "aws_key_pair" "deployer" {
 resource "aws_instance" "backend" {
   ami                         = "ami-08c40ec9ead489470"
   instance_type               = "t2.micro"
-  subnet_id                   = aws_subnet.private.id
+  subnet_id                   = aws_subnet.private_a.id
   key_name                    = aws_key_pair.deployer.key_name
   vpc_security_group_ids      = [aws_security_group.ec2_sg.id]
   associate_public_ip_address = false 
@@ -21,8 +21,16 @@ resource "aws_instance" "backend" {
 
               sudo usermod -aG docker ubuntu
 
-              docker run -d -p 3000:3000 --name backend-app ashan352/to-app-aws-backend
-              EOF
+              # Run Docker container with correct environment variables
+              docker run -d -p 3000:3000 \
+                -e DB_HOST=myapp-db.c4skp9zvnt3k.us-east-1.rds.amazonaws.com \
+                -e DB_PORT=3306 \
+                -e DB_USER=root \
+                -e DB_PASSWORD=Ashan1337inupa\
+                -e DB_NAME=product_catalog \
+                --name backend-app \
+                ashan352/to-app-aws-backend
+EOF
 
   tags = {
     Name = "Backend-Server"

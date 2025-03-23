@@ -8,5 +8,10 @@ output "public_subnet_id" {
 }
 
 output "private_subnet_id" {
-  value = aws_subnet.private.id
+  value = aws_subnet.private_a.id
 }
+
+output "rds_endpoint" {
+  value = aws_db_instance.main.endpoint
+}
+
