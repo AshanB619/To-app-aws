@@ -29,4 +29,4 @@ This project showcases a **cloud-native, multi-tier To-Do web application** depl
 ---
 
 
-![Alt text]([images/your-image-name.png](https://github.com/AshanB619/To-app-aws/blob/0840c80e0e36567cd154c56ad83330358be3021b/Untitled%20Diagram.drawio.png))
+![Alt text](https://github.com/AshanB619/To-app-aws/blob/0840c80e0e36567cd154c56ad83330358be3021b/Untitled%20Diagram.drawio.png)
