@@ -1,18 +1,3 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 # ✅ Multi-Tier To-Do Web Application on AWS using Terraform
 
 This project showcases a **cloud-native, multi-tier To-Do web application** deployed on **AWS** using **Terraform** for Infrastructure as Code (IaC). It consists of a React frontend, a Node.js backend, and a MySQL database — all integrated with AWS services following best practices in scalability, security, and automation.
@@ -42,3 +27,7 @@ This project showcases a **cloud-native, multi-tier To-Do web application** depl
 - ✅ VPC with public/private subnets and proper network isolation
 
 ---
+
+
+https://github.com/AshanB619/To-app-aws/blob/f5963398e47451e663263ed7fc9d9e72181d0590/Untitled%20Diagram.drawio.png
+
